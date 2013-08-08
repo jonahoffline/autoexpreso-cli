@@ -1,4 +1,4 @@
-## Autoexpreso
+## Autoexpreso [![Build Status](https://travis-ci.org/jonahoffline/autoexpreso-cli.png?branch=convert_to_gem)](https://travis-ci.org/jonahoffline/autoexpreso-cli)
 A Ruby Gem and Command-Line App for getting your account status from autoexpreso.com
 
 ### Features
