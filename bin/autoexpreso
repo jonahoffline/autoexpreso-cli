@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+Signal.trap("INT") { exit 1 }
+
+$LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib/'
+require 'autoexpreso'
+require 'autoexpreso/cli'
+
+AutoExpreso::CLI.new(ARGV).parse
