@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'mechanize'
-gem 'awesome_print'
-gem 'highline'
+# Specify your gem's dependencies in autoexpreso.gemspec
+gemspec
