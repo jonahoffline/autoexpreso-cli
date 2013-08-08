@@ -6,7 +6,7 @@ require 'autoexpreso/version'
 Gem::Specification.new do |spec|
   spec.name          = 'autoexpreso'
   spec.version       = AutoExpreso::VERSION
-  spec.authors       = ['Jonah Ruiz']
+  spec.authors       = ['Axel Rivera','Jonah Ruiz']
   spec.email         = ['jonah@pixelhipsters.com']
   spec.description   = %q{Scrapes autoexpreso.com}
   spec.summary       = %q{Scrapes autoexpreso.com for your account status}
