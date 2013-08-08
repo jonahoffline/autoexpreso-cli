@@ -1,15 +1,47 @@
-## Ruby Command Line Script that scrapes autoexpreso.com
+## Autoexpreso
+A Ruby Gem and Command-Line App for getting your account status from autoexpreso.com
 
-This is a proof of concept showing how to access basic information from the website.
-
-The script uses [Mechanize](http://mechanize.rubyforge.org) which depends on [Nokogiri](http://nokogiri.org).
-
+### Features
 * Gets your basic account info
 * Gets the latest 20 transactions
 
-### Install
 
-```` bash
-bundle install
-ruby autoexpreso-cli.rb
-````
+### Installation
+	$ gem install autoexpreso
+
+## Usage
+
+Ruby:
+
+```ruby
+require 'autoexpreso'
+
+ae = AutoExpreso::Client.new
+ae.login('username', 'password')
+```
+
+Commandline-Application:
+```
+console
+autoexpreso --login
+Username:  tavin_pumarejo
+Password:  **************
+
+
+## Authors
+* [Axel Rivera](http://riveralabs.com)
+* [Jonah Ruiz](http://www.pixelhipsters.com)
+
+
+### TODO
+* Persistence
+* Examples for integrating with Ruby On Rails / Sinatra
+* JSON Formatter
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
