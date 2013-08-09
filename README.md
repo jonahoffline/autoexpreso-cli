@@ -1,4 +1,4 @@
-## Autoexpreso [![Build Status](https://travis-ci.org/jonahoffline/autoexpreso-cli.png?branch=convert_to_gem)](https://travis-ci.org/jonahoffline/autoexpreso-cli)
+## Autoexpreso [![Build Status](https://travis-ci.org/riveralabs/autoexpreso-cli.png?branch=master)](https://travis-ci.org/riveralabs/autoexpreso-cli) [![Gem Version](https://badge.fury.io/rb/autoexpreso.png)](http://badge.fury.io/rb/autoexpreso) [![Code Climate](https://codeclimate.com/github/riveralabs/autoexpreso-cli.png)](https://codeclimate.com/github/riveralabs/autoexpreso-cli)
 A Ruby Gem and Command-Line App for getting your account status from autoexpreso.com
 
 ### Features
@@ -20,14 +20,17 @@ ae = AutoExpreso::Client.new
 ae.login('username', 'password')
 ```
 
-Commandline-Application:
+In your terminal:
 
-```
-console
-autoexpreso --login
-Username:  tavin_pumarejo
-Password:  **************
-```
+	$ autoexpreso --login
+	Username:  tavin_pumarejo
+	Password:  **************
+
+### Command-Line Options
+
+  * -l, --login       - Log into AutoExpreso
+  * -h, --help        - show help message
+
 
 ## Authors
 * [Axel Rivera](http://riveralabs.com)
@@ -38,6 +41,7 @@ Password:  **************
 * Persistence
 * Examples for integrating with Ruby On Rails / Sinatra
 * JSON Formatter
+* Better test coverage
 
 ## Contributing
 
