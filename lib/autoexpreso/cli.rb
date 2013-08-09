@@ -2,7 +2,6 @@ require 'optparse'
 require 'highline/import'
 
 module AutoExpreso
-  # @author Jonah Ruiz <jonah@pixelhipsters.com>
   # A Simple class for the executable version of the gem
   class CLI
 
@@ -24,7 +23,7 @@ Options:
 MSG
       opts.set_program_name 'AutoExpreso'
       opts.on_head('-l', '--login', 'Log into AutoExpreso') do
-        @login = :true
+        @login = true
       end
 
       opts.on_tail('-v', '--version', 'display the version of AutoExpreso and exit') do
@@ -44,7 +43,7 @@ MSG
       opts = OptionParser.new(&method(:set_options))
       opts.parse!(@args)
       return login if @login
-      opts.help
+      puts opts.help
     end
 
     def login
