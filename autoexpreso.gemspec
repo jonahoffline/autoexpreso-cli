@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = 'autoexpreso'
   spec.version       = AutoExpreso::VERSION
   spec.authors       = ['Axel Rivera','Jonah Ruiz']
-  spec.email         = ['jonah@pixelhipsters.com']
-  spec.description   = %q{Scrapes autoexpreso.com}
-  spec.summary       = %q{Scrapes autoexpreso.com for your account status}
-  spec.homepage      = 'https://www.github.com/jonahoffline/autoexpreso-cli'
+  spec.email         = ['axel@riveralabs.com','jonah@pixelhipsters.com']
+  spec.description   = %q{Scrape autoexpreso.com for your account status}
+  spec.summary       = %q{Scrape autoexpreso.com for your account status and last transactions.}
+  spec.homepage      = 'https://www.github.com/riveralabs/autoexpreso-cli'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
