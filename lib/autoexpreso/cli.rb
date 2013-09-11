@@ -15,7 +15,7 @@ module AutoExpreso
     def set_options(opts)
       opts.version = AutoExpreso::VERSION
       opts.banner  = <<MSG
-Usage: link_shrink [OPTION]
+Usage: autoexpreso [OPTION]
 Description:
   Autoexpreso, Scrapes autoexpreso.com for your account status.
 
