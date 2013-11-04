@@ -1,5 +1,10 @@
 # AutoExpreso Changelog
 
+### 0.0.4
+Released November 4, 2013 ([0.0.4](https://github.com/riveralabs/autoexpreso-cli/tree/v0.0.4)).
+
+* Update gemspec's dependency of awesome_print to 1.2.0
+
 ### 0.0.3
 Released September 11, 2013 ([0.0.3](https://github.com/riveralabs/autoexpreso-cli/tree/v0.0.3)).
 
