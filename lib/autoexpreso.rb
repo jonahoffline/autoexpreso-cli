@@ -8,7 +8,8 @@ module AutoExpreso
   class Client
     include AutoExpreso::DataUtils
 
-    AE_URL = 'https://www.autoexpreso.com/Login.aspx'
+    AE_LOGIN   = 'https://www.autoexpreso.com/Login.aspx'
+    AE_ACCOUNT = 'https://www.autoexpreso.com/dynamic/'
 
     attr_reader :client, :account, :transactions, :account_page
 
@@ -19,23 +20,34 @@ module AutoExpreso
     end
 
     def login(username, password)
-      process_request(username, password)
+      authenticate(username, password)
+      process_request
       ap @account
     end
 
-    def process_request(username, password)
-      @client.get(AE_URL) do |page|
-        @account_page = page.form_with(id: form_data.login_form_id) do |form|
+    def authenticate(username, password)
+      @client.get(AE_LOGIN) do |page|
+        page.form_with(id: form_data.login_form_id) do |form|
           form[form_data.login_form_username_name] = username
           form[form_data.login_form_password_name] = password
         end.click_button
       end
+    end
+
+    def process_request
+      process_transactions
       save_account
       table_strip
     end
 
+    def process_transactions
+      @account_page = @client.get(AE_ACCOUNT)
+    end
+
     def save_account
-      attributes.map { |attribute| @account[attribute] = text_strip(form_data.send(attribute)) }
+      attributes.map do |attribute|
+        @account[attribute] = text_strip(form_data.send(attribute))
+      end
     end
 
     def text_strip(field_name)
