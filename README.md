@@ -75,7 +75,7 @@ In your terminal:
 
 ### TODO
 * Persistence
-* Examples for integrating with Ruby On Rails / Sinatra
+* ~~Examples for integrating with Sinatra~~
 * ~~JSON Formatter~~
 * Better test coverage
 
