@@ -3,6 +3,7 @@ require 'autoexpreso/data_utils'
 require 'mechanize'
 require 'awesome_print'
 require 'ostruct'
+require 'json'
 
 module AutoExpreso
   class Client
@@ -22,7 +23,6 @@ module AutoExpreso
     def login(username, password)
       authenticate(username, password)
       process_request
-      ap @account
     end
 
     def authenticate(username, password)
@@ -66,6 +66,14 @@ module AutoExpreso
         save_transactions(tds, @transactions)
       end
       @account[:transactions] = @transactions
+    end
+
+    def account_details(json: false)
+      if json
+        puts JSON.pretty_generate(account)
+      else
+        ap account
+      end
     end
   end
 end
