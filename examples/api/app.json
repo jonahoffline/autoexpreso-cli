@@ -1,0 +1,15 @@
+{
+  "name": "AutoExpreso API",
+  "description": "A simple AutoExpreso API server to return your Account Details and Usage.",
+  "keywords": [
+    "autoexpreso",
+    "api",
+    "sinatra",
+    "heroku",
+    "cedar",
+    "puerto rico"
+  ],
+  "repository": "https://github.com/riveralabs/autoexpreso-cli",
+  "addons": [],
+  "env": {}
+}
