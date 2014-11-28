@@ -1,8 +1,8 @@
 ## Autoexpreso
-[![Build Status](http://img.shields.io/travis/riveralabs/autoexpreso-cli.svg?style=flat-square)](https://travis-ci.org/riveralabs/autoexpreso-cli)
+[![Build Status](http://img.shields.io/travis/jonahoffline/autoexpreso-cli.svg?style=flat-square)](https://travis-ci.org/jonahoffline/autoexpreso-cli)
 [![Gem Version](http://img.shields.io/gem/v/autoexpreso.svg?style=flat-square)](http://badge.fury.io/rb/autoexpreso)
-[![Dependency Status](http://img.shields.io/gemnasium/riveralabs/autoexpreso-cli.svg?style=flat-square)](https://gemnasium.com/riveralabs/autoexpreso-cli)
-[![Code Climate](http://img.shields.io/codeclimate/github/riveralabs/autoexpreso-cli.svg?style=flat-square)](https://codeclimate.com/github/riveralabs/autoexpreso-cli)
+[![Dependency Status](http://img.shields.io/gemnasium/jonahoffline/autoexpreso-cli.svg?style=flat-square)](https://gemnasium.com/jonahoffline/autoexpreso-cli)
+[![Code Climate](http://img.shields.io/codeclimate/github/jonahoffline/autoexpreso-cli.svg?style=flat-square)](https://codeclimate.com/github/jonahoffline/autoexpreso-cli)
 
 A Ruby Gem and Command-Line App for getting your account status from autoexpreso.com
 
@@ -14,7 +14,7 @@ A Ruby Gem and Command-Line App for getting your account status from autoexpreso
 
 There is a Demo API built with this gem available at [http://autoexpreso-api.herokuapp.com/account_details](http://autoexpreso-api.herokuapp.com/account_details)
 
-For more information visit the [examples/api](https://github.com/riveralabs/autoexpreso-cli/tree/master/examples/api) folder of this repository.
+For more information visit the [examples/api](https://github.com/jonahoffline/autoexpreso-cli/tree/master/examples/api) folder of this repository.
 
 
 ### Installation
@@ -75,7 +75,7 @@ In your terminal:
 
 ### Examples
 
-Examples are available at [examples/api](https://github.com/riveralabs/autoexpreso-cli/tree/master/examples/api)
+Examples are available at [examples/api](https://github.com/jonahoffline/autoexpreso-cli/tree/master/examples/api)
 
 
 ## Authors
