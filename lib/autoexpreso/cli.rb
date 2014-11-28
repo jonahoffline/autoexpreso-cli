@@ -26,12 +26,16 @@ MSG
         @login = true
       end
 
-      opts.on_tail('-v', '--version', 'display the version of AutoExpreso and exit') do
+      opts.on_head('-j', '--json', 'Return account details as json') do
+        @json = true
+      end
+
+      opts.on_tail('-v', '--version', 'Display the version of AutoExpreso and exit') do
         puts opts.version
         exit
       end
 
-      opts.on_tail('-h', '--help', 'print this help') do
+      opts.on_tail('-h', '--help', 'Print this help') do
         puts opts.help
         exit
       end
@@ -46,10 +50,23 @@ MSG
       puts opts.help
     end
 
+    def header
+      stars = "*" * 50
+      details = "\t Enter your account details\n\n"
+      puts stars, "\t\t AutoExpreso", stars, "\n", details
+    end
+
     def login
+      header
+
       username = ask('Username:  ')
       password = ask('Password:  ') { |q| q.echo = '*' }
-      AutoExpreso::Client.new.login(username, password)
+
+      ae = AutoExpreso::Client.new
+      ae.login(username, password)
+      puts "Account Details:"
+
+      @json ? ae.account_details(json: true) : ae.account_details
     end
   end
 end
