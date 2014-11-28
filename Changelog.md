@@ -1,5 +1,17 @@
 # AutoExpreso Changelog
 
+### 1.0.0
+Released November 27, 2014 ([1.0.0](https://github.com/riveralabs/autoexpreso-cli/tree/v1.0.0)).
+
+* Fix issue preventing data from being returned.
+* Add #account_details method to delegate printing (Hash or JSON).
+* Add -j, --json flags for printing account details in json from CLI.
+* Add welcome header to CLI.
+* Update README with new flag documentation and example.
+* Add wercker.yml for testing.
+* Update .ruby-version from 2.0.0-p247 to 2.1.4
+* Bump release version.
+
 ### 0.0.4
 Released November 4, 2013 ([0.0.4](https://github.com/riveralabs/autoexpreso-cli/tree/v0.0.4)).
 
