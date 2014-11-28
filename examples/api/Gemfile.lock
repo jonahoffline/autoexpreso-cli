@@ -1,0 +1,67 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    autoexpreso (1.0.0)
+      awesome_print (~> 1.2.0)
+      highline (~> 1.6.19)
+      mechanize (~> 2.7.1)
+    awesome_print (1.2.0)
+    backports (3.6.4)
+    daemons (1.1.9)
+    domain_name (0.5.22)
+      unf (>= 0.0.5, < 1.0.0)
+    eventmachine (1.0.3)
+    highline (1.6.21)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
+    mechanize (2.7.3)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0)
+      mime-types (~> 2.0)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.4)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (>= 0.0.9, < 0.2)
+    mime-types (2.4.3)
+    mini_portile (0.6.1)
+    multi_json (1.10.1)
+    net-http-digest_auth (1.4)
+    net-http-persistent (2.9.4)
+    nokogiri (1.6.5)
+      mini_portile (~> 0.6.0)
+    ntlm-http (0.1.1)
+    rack (1.5.2)
+    rack-protection (1.5.3)
+      rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    sinatra (1.4.5)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
+    sinatra-contrib (1.4.2)
+      backports (>= 2.0)
+      multi_json
+      rack-protection
+      rack-test
+      sinatra (~> 1.4.0)
+      tilt (~> 1.3)
+    thin (1.6.3)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0)
+      rack (~> 1.0)
+    tilt (1.4.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.6)
+    webrobots (0.1.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  autoexpreso
+  sinatra
+  sinatra-contrib
+  thin
