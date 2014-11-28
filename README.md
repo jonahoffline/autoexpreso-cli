@@ -27,8 +27,8 @@ ae.account_details
 ```
 
 In your terminal:
-
-	$ autoexpreso --login
+```console
+  $ autoexpreso --login
   **************************************************
                     AutoExpreso
   **************************************************
@@ -58,6 +58,7 @@ In your terminal:
       }
     ]
   }
+```
 
 ### Command-Line Options
 
