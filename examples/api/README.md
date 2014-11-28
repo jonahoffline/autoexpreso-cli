@@ -24,7 +24,7 @@ Posting to `/account_details`
 ## Deploying to Heroku
 
 ```console
-git clone https://github.com/riveralabs/autoexpreso-cli.git
+git clone https://github.com/jonahoffline/autoexpreso-cli.git
 cp -R autoexpreso-cli/examples/api api/
 cd api/
 
