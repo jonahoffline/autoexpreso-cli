@@ -10,6 +10,12 @@ A Ruby Gem and Command-Line App for getting your account status from autoexpreso
 * Gets your basic account info
 * Gets the latest 20 transactions (JSON or Ruby hash)
 
+### Demo API
+
+There is a Demo API built with this gem available at [http://autoexpreso-api.herokuapp.com/account_details](http://autoexpreso-api.herokuapp.com/account_details)
+
+For more information visit the [examples/api](https://github.com/riveralabs/autoexpreso-cli/tree/master/examples/api) folder of this repository.
+
 
 ### Installation
 	$ gem install autoexpreso
@@ -66,6 +72,10 @@ In your terminal:
   * -j, --json        - Return account details as json
   * -h, --help        - Print help message
   * -v, --version     - Display the version of AutoExpreso and exit
+
+### Examples
+
+Examples are available at [examples/api](https://github.com/riveralabs/autoexpreso-cli/tree/master/examples/api)
 
 
 ## Authors
