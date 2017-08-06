@@ -1,5 +1,14 @@
 # AutoExpreso Changelog
 
+### 1.0.2
+Released August 5, 2017 ([1.0.2](https://github.com/jonahoffline/autoexpreso-cli/tree/v1.0.2)).
+
+* Update all gemspec dependencies.
+* Add `required_ruby_version` >= `2.2.2`.
+* Cleanup travis: ruby versions.
+* Add Hakiri (security) badge.
+* Bump release version to 1.0.2.
+
 ### 1.0.1
 Released November 28, 2014 ([1.0.1](https://github.com/jonahoffline/autoexpreso-cli/tree/v1.0.1)).
 
