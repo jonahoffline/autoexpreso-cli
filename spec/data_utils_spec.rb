@@ -16,8 +16,8 @@ describe AutoExpreso::DataUtils do
     end
 
     it 'contains methods' do
-      expect(data_utils.form_data.methods(false))
-      .to match_array [:login_form_id, :login_form_id=, :login_form_username_name, :login_form_username_name=, :login_form_password_name, :login_form_password_name=, :account_name_id, :account_name_id=, :account_balance_id, :account_balance_id=, :account_status_id, :account_status_id=, :account_last_payment_id, :account_last_payment_id=, :account_last_payment_date_id, :account_last_payment_date_id=, :account_transaction_table_id, :account_transaction_table_id=]
+      expect(data_utils.attributes)
+      .to match_array [:account_name_id, :account_balance_id, :account_status_id, :account_last_payment_id, :account_last_payment_date_id]
     end
 
     it 'returns html attributes correctly' do

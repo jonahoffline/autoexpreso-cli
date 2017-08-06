@@ -1,13 +1,8 @@
 ---
 language: ruby
 rvm:
-- 2.1.4
+  - 2.4.1
+  - 2.3.3
+  - 2.2.6
+  - 2.2.2
 script: bundle exec rake test
-notifications:
-  recipients:
-    - jonah@pixelhipsters.com
-  irc:
-    on_success: change
-    on_failure: always
-    channels:
-    - irc.freenode.org#rubyonadhd
