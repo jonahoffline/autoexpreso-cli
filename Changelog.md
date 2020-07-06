@@ -1,5 +1,14 @@
 # AutoExpreso Changelog
 
+### 2.0.0
+Released July 5, 2020 ([2.0.0](https://github.com/jonahoffline/autoexpreso-cli/tree/v2.0.0)).
+
+* Replace Old AutoExpreso (scraped) API with newly REST endpoints.
+* Replace `mechanize` dependency for `faraday` and `typhoeus`.
+* Replace `awesome_print` dependency to `awesome_print`.
+* Add Typhoeus caching.
+* Update gemspec to require Ruby version >= 2.4
+
 ### 1.0.2
 Released August 5, 2017 ([1.0.2](https://github.com/jonahoffline/autoexpreso-cli/tree/v1.0.2)).
 
