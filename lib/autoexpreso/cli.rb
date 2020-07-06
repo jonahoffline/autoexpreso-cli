@@ -59,11 +59,11 @@ MSG
     def login
       header
 
-      username = ask('Username:  ')
+      email = ask('Email:  ')
       password = ask('Password:  ') { |q| q.echo = '*' }
 
       ae = AutoExpreso::Client.new
-      ae.login(username, password)
+      ae.login(email, password)
       puts "Account Details:"
 
       @json ? ae.account_details(json: true) : ae.account_details
