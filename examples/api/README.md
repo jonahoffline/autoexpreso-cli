@@ -18,7 +18,7 @@ $ rackup config.ru
 
 Posting to `/account_details`
 
-`curl -X POST -H "Content-Type: application/json" -d '{"username":"tavi_pumarejo","password":"tututuah-tuah"}' http://autoexpreso-api.herokuapp.com/account_details`
+`curl -X POST -H "Content-Type: application/json" -d '{"email":"tavi_pumarejo","password":"tututuah-tuah"}' http://autoexpreso-api.herokuapp.com/account_details`
 
 
 ## Deploying to Heroku

@@ -14,7 +14,7 @@ module AutoExpreso
       data = JSON.parse(request.body.read)
 
       ae = AutoExpreso::Client.new
-      ae.login(data['username'], data['password'])
+      ae.login(data['email'], data['password'])
 
       json ae.account_details
     end

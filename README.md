@@ -1,8 +1,6 @@
 ## Autoexpreso
-[![Build Status](http://img.shields.io/travis/jonahoffline/autoexpreso-cli.svg?style=flat-square)](https://travis-ci.org/jonahoffline/autoexpreso-cli)
 [![Gem Version](http://img.shields.io/gem/v/autoexpreso.svg?style=flat-square)](http://badge.fury.io/rb/autoexpreso)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9cde80c2131b5ca913f2/maintainability)](https://codeclimate.com/github/jonahoffline/autoexpreso-cli/maintainability)
-[![security](https://hakiri.io/github/jonahoffline/autoexpreso-cli/master.svg)](https://hakiri.io/github/jonahoffline/autoexpreso-cli/master)
 
 A Ruby Gem and Command-Line App for getting your account status from autoexpreso.com
 
@@ -40,30 +38,37 @@ In your terminal:
   **************************************************
             Enter your account details
 
-  Username:  tavin_pumarejo
+  Email:  tavin_pumarejo
   Password:  **************
   Account Details:
-  {
-    "account_name_id": "TAVIN PUMAREJO",
-    "account_balance_id": "$ 17.80",
-    "account_status_id": "Activo",
-    "account_last_payment_id": "$ 20.00",
-    "account_last_payment_date_id": "20/11/2014 05:29:10 p.m.",
+```
+
+```json
+
+{
+    "currentBalance": 13.5500,
+    "firstName": "Tavin",
+    "lastName": "Pumarejo",
+    "email": "tavin@pumarejo.com",
     "transactions": [
-      {
-        "date": "20/11/2014 10:21:44 p.m.",
-        "location": "Toa Baja - 5",
-        "amount": "$ 1.10",
-        "tag_number": "1337"
-      },
-      {
-        "date": "20/11/2014 05:43:17 p.m.",
-        "location": "Buchanan - 21",
-        "amount": "$ 1.10",
-        "tag_number": "1337"
-      }
-    ]
-  }
+        {
+            "transactionDate": "4/27/2020 9:27:34 PM",
+            "plaza": "Buchanan Eb Ort - 8",
+            "amount": 0.7000,
+            "tagNumber": 1337,
+            "location": "Buchanan Eb Ort - 3",
+            "isReplenish": false,
+            "vehicle": {
+                "brand": "Suzuki",
+                "model": "Forsa Tres Potes 800",
+                "year": 1985,
+                "plate": "TP123",
+                "axles": 0,
+                "tagNumber": 0
+            }
+        }
+      ]
+    }
 ```
 
 ### Command-Line Options
