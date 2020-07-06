@@ -3,7 +3,7 @@
 This is an example API server to illustrate possible use.
 
 ## Demo version
-The demo version of this API is available at [http://autoexpreso-api.herokuapp.com/account_details](http://autoexpreso-api.herokuapp.com/account_details)
+The demo version of this API is available at [https://autoexpreso-api.herokuapp.com/account_details](https://autoexpreso-api.herokuapp.com/account_details)
 
 
 ## Running the server
@@ -18,7 +18,7 @@ $ rackup config.ru
 
 Posting to `/account_details`
 
-`curl -X POST -H "Content-Type: application/json" -d '{"email":"tavin@pumarejo.com","password":"tututuah-tuah"}' http://autoexpreso-api.herokuapp.com/account_details`
+`curl -X POST -H "Content-Type: application/json" -d '{"email":"tavin@pumarejo.com","password":"tututuah-tuah"}' https://autoexpreso-api.herokuapp.com/account_details`
 
 
 ## Deploying to Heroku

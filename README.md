@@ -10,7 +10,7 @@ A Ruby Gem and Command-Line App for getting your account status from autoexpreso
 
 ### Demo API
 
-There is a Demo API built with this gem available at [http://autoexpreso-api.herokuapp.com/account_details](http://autoexpreso-api.herokuapp.com/account_details)
+There is a Demo API built with this gem available at [https://autoexpreso-api.herokuapp.com/account_details](https://autoexpreso-api.herokuapp.com/account_details)
 
 For more information visit the [examples/api](https://github.com/jonahoffline/autoexpreso-cli/tree/master/examples/api) folder of this repository.
 
