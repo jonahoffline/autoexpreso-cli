@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.required_ruby_version = '>= 2.4'
 
-  spec.add_dependency 'awesome_print', '~> 1.8'
+  spec.add_dependency 'amazing_print', '~> 1.2.1'
   spec.add_dependency 'highline', '~> 2.0.3'
   spec.add_dependency 'faraday', '~> 1.0.1'
   spec.add_dependency 'typhoeus', '~> 1.4.0'

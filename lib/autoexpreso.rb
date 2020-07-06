@@ -4,7 +4,7 @@ require 'autoexpreso/cache'
 require 'faraday'
 require 'typhoeus'
 require 'typhoeus/adapters/faraday'
-require 'awesome_print'
+require 'amazing_print'
 require 'ostruct'
 require 'json'
 
