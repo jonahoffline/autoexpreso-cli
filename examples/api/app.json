@@ -9,7 +9,7 @@
     "cedar",
     "puerto rico"
   ],
-  "repository": "https://github.com/riveralabs/autoexpreso-cli/blob/master/examples/api",
+  "repository": "https://github.com/jonahoffline/autoexpreso-cli/blob/master/examples/api",
   "addons": [],
   "env": {}
 }
