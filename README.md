@@ -1,8 +1,6 @@
 ## Autoexpreso
-[![Build Status](http://img.shields.io/travis/jonahoffline/autoexpreso-cli.svg?style=flat-square)](https://travis-ci.org/jonahoffline/autoexpreso-cli)
 [![Gem Version](http://img.shields.io/gem/v/autoexpreso.svg?style=flat-square)](http://badge.fury.io/rb/autoexpreso)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9cde80c2131b5ca913f2/maintainability)](https://codeclimate.com/github/jonahoffline/autoexpreso-cli/maintainability)
-[![security](https://hakiri.io/github/jonahoffline/autoexpreso-cli/master.svg)](https://hakiri.io/github/jonahoffline/autoexpreso-cli/master)
 
 A Ruby Gem and Command-Line App for getting your account status from autoexpreso.com
 
