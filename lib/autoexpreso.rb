@@ -1,6 +1,8 @@
 require 'autoexpreso/version'
 require 'autoexpreso/data_utils'
-require 'mechanize'
+require 'faraday'
+require 'typhoeus'
+require 'typhoeus/adapters/faraday'
 require 'awesome_print'
 require 'ostruct'
 require 'json'
@@ -9,63 +11,25 @@ module AutoExpreso
   class Client
     include AutoExpreso::DataUtils
 
-    AE_LOGIN   = 'https://www.autoexpreso.com/Login.aspx'
-    AE_ACCOUNT = 'https://www.autoexpreso.com/dynamic/'
+    BASE_URL = 'https://tp-api.autoexpreso.com/api'
+    USER_AGENT = "AutoExpreso-Rubygem/#{AutoExpreso::VERSION}"
 
-    attr_reader :client, :account, :transactions, :account_page
+    ENDPOINTS = {
+      login: '/Auth/Login',
+      account_summary: '/Account/GetAccountSummary'
+    }
+
+    attr_reader :client, :account
+    attr_accessor :jwt_header
 
     def initialize(*args)
-      @client       = Mechanize.new
-      @account      = Hash.new
-      @transactions = []
+      @client = Faraday.new
+      @account = Hash.new
     end
 
-    def login(username, password)
-      authenticate(username, password)
-      process_request
-    end
-
-    def authenticate(username, password)
-      @client.get(AE_LOGIN) do |page|
-        page.form_with(id: form_data.login_form_id) do |form|
-          form[form_data.login_form_username_name] = username
-          form[form_data.login_form_password_name] = password
-        end.click_button
-      end
-    end
-
-    def process_request
-      process_transactions
-      save_account
-      table_strip
-    end
-
-    def process_transactions
-      @account_page = @client.get(AE_ACCOUNT)
-    end
-
-    def save_account
-      attributes.map do |attribute|
-        @account[attribute] = text_strip(form_data.send(attribute))
-      end
-    end
-
-    def text_strip(field_name)
-      @account_page.search(field_name).text.strip
-    end
-
-    def table_data
-      @account_page.search("#{form_data.account_transaction_table_id} tbody tr")
-    end
-
-    def table_strip
-      table_data.each do |tr|
-        tds = tr.search('td')
-        next unless tds.count == 4
-
-        save_transactions(tds, @transactions)
-      end
-      @account[:transactions] = @transactions
+    def login(email, password)
+      authenticate(email, password)
+      account_summary
     end
 
     def account_details(json: false)
@@ -75,5 +39,46 @@ module AutoExpreso
         ap account
       end
     end
+
+    protected
+
+      def authorization_header
+        "Bearer #{jwt_header}"
+      end
+
+      def default_connection(debug = false)
+        @client.new(url: BASE_URL) do |conn|
+          conn.adapter :typhoeus
+          conn.headers[:user_agent] = USER_AGENT
+          conn.headers[:content_type] = 'application/json'
+          conn.headers['Authorization'] = authorization_header if @jwt_header
+        end
+      end
+
+      def authenticate(email, password)
+        payload = { email: email, password: password }
+
+        response = default_connection.post do |req|
+                     req.url(ENDPOINTS[:login])
+                     req.body = JSON.generate(payload)
+                   end
+
+        if response.success?
+          @response = JSON.parse(response.body, object_class: OpenStruct)
+          @jwt_header = response.accessToken
+        end
+      end
+
+      def account_summary
+        response = default_connection.get do |req|
+                     req.url(ENDPOINTS[:account_summary])
+                     req.body = JSON.generate(payload)
+                   end
+
+        if response.success?
+          @response = JSON.parse(response.body, object_class: OpenStruct)
+          @account = @response
+        end
+      end
   end
 end
