@@ -5,8 +5,8 @@
 A Ruby Gem and Command-Line App for getting your account status from autoexpreso.com
 
 ### Features
-* Gets your basic account info
-* Gets the latest 20 transactions (JSON or Ruby hash)
+* Basic account + balance info
+* Latest transactions
 
 ### Demo API
 
@@ -26,7 +26,7 @@ Ruby:
 require 'autoexpreso'
 
 ae = AutoExpreso::Client.new
-ae.login('username', 'password')
+ae.login('tavin@pumarejo.com', 'password')
 ae.account_details
 ```
 
@@ -38,7 +38,7 @@ In your terminal:
   **************************************************
             Enter your account details
 
-  Email:  tavin_pumarejo
+  Email:  tavin@pumarejo.com
   Password:  **************
   Account Details:
 ```
@@ -84,15 +84,7 @@ Examples are available at [examples/api](https://github.com/jonahoffline/autoexp
 
 
 ## Authors
-* [Axel Rivera](http://riveralabs.com)
 * [Jonah Ruiz](http://www.pixelhipsters.com)
-
-
-### TODO
-* Persistence
-* ~~Examples for integrating with Sinatra~~
-* ~~JSON Formatter~~
-* Better test coverage
 
 ## Contributing
 
