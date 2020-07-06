@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = AutoExpreso::VERSION
   spec.authors       = ['Jonah Ruiz']
   spec.email         = ['jonah@pixelhipsters.com']
-  spec.description   = %q{Scrape autoexpreso.com for your account status}
-  spec.summary       = %q{Scrape autoexpreso.com for your account status and last transactions.}
+  spec.description   = %q{Non-official autoexpreso.com Ruby library and CLI application.}
+  spec.summary       = %q{Non-official autoexpreso.com Ruby library and CLI for the service}
   spec.homepage      = 'https://www.github.com/jonahoffline/autoexpreso-cli'
   spec.license       = 'MIT'
 
